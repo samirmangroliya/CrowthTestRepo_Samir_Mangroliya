@@ -27,7 +27,7 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.11'
+        jvmTarget = '1.8'
     }
     buildFeatures {
         viewBinding true
@@ -47,4 +47,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'com.mcxiaoke.viewpagerindicator:library:2.4.1'
+    implementation 'me.relex:circleindicator:2.1.6'
 }

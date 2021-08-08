@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.samir.crowthcodetest.R
 import com.samir.crowthcodetest.adapter.MainAdapter
 import com.samir.crowthcodetest.databinding.ActivityMainBinding
-import com.samir.crowthcodetest.model.MainModel
 import com.samir.crowthcodetest.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mainAdapter: MainAdapter
-    private var listOfItems = ArrayList<MainModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,16 +32,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = ""
+
         recyclerView = binding.contentmain.recyclerview
-        mainAdapter = MainAdapter(listOfItems)
-        recyclerView.adapter = mainAdapter
+
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
 
     private fun setUpRecyclerView() {
-        listOfItems = mainViewModel.getPageData()
-        mainAdapter.notifyDataSetChanged()
+        mainAdapter = MainAdapter(mainViewModel.getPageData())
+        recyclerView.adapter = mainAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

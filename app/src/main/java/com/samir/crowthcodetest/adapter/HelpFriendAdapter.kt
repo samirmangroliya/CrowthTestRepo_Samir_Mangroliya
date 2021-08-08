@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.samir.crowthcodetest.model.Friend
 import com.samir.crowthcodetest.R
+import com.samir.crowthcodetest.model.Friend
 
-class HelpFriendAdapter(val listOfFriends: MutableList<Friend>) : RecyclerView.Adapter<HelpFriendAdapter.HelpFriendsHolder>() {
+class HelpFriendAdapter(private val listOfFriends: MutableList<Friend>) : RecyclerView.Adapter<HelpFriendAdapter.HelpFriendsHolder>() {
 
 
     override fun onBindViewHolder(holder: HelpFriendsHolder, position: Int) {

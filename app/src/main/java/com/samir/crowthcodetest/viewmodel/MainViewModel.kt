@@ -7,7 +7,7 @@ import com.samir.crowthcodetest.model.MainModel
 
 class MainViewModel : ViewModel() {
     fun getPageData(): ArrayList<MainModel> {
-        var listOfItems = ArrayList<MainModel>()
+        val listOfItems = ArrayList<MainModel>()
 
         //add dummy campain here
         val campaign1 = Campaign("Black Lives Matter 1", "25-June-2021")
@@ -37,6 +37,7 @@ class MainViewModel : ViewModel() {
 
         listOfItems.add(searchAndOption)
         listOfItems.add(campaigns)
+        listOfItems.add(friends)
         listOfItems.add(friends)
 
         return listOfItems

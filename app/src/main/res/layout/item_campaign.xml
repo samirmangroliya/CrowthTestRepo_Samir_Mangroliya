@@ -3,20 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="226dp"
     android:elevation="10dp"
     android:orientation="vertical"
     android:outlineProvider="bounds">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
         android:layout_height="226dp"
         android:layout_centerInParent="true"
         app:cardCornerRadius="5dp">
 
         <ImageView
-            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -48,7 +46,6 @@
                 tools:text="Black Lives matter" />
 
             <ImageView
-                android:id="@+id/imgforward"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
