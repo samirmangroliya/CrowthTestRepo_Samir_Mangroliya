@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CrowthCodeTest</string>
+    <string name="help_friends">Help friends and get paid</string>
+    <string name="senior_project_manager_london">Senior Project Manager, London</string>
+    <string name="action_chat">Chat</string>
+    <string name="action_menu">Menu</string>
+    <string name="explorer">Explorer</string>
+</resources>
